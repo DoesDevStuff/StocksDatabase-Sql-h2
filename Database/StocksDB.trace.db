@@ -1,0 +1,2106 @@
+2024-03-31 12:43:08.376000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "Show [*]Table"; SQL statement:
+Show Table [42000-224]
+2024-03-31 13:00:20.973000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]* from BseStockNames"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop * from BseStockNames [42001-224]
+2024-03-31 13:06:39.197000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete from BseStockNames where stockname = 'AsianPaint.bese'[*], 'Reliance.Base'"; SQL statement:
+delete from BseStockNames where stockname = 'AsianPaint.bese', 'Reliance.Base' [42000-224]
+2024-03-31 13:07:26.606000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "CHARACTER VARYING to BOOLEAN"; SQL statement:
+delete from BseStockNames where stockname = 'AsianPaint.bese' OR 'Reliance.Base' [22018-224]
+2024-03-31 13:10:14.161000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "Reliance.Bse" not found; SQL statement:
+delete from BseStockNames where STOCKNAME = "Reliance.Bse" OR STOCKNAME="AsianPaint.Bse" [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:148)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:136)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.dml.Delete.doPrepare(Delete.java:112)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-03-31 13:11:02.945000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]* from BseStockNames where STOCKNAME = ""Reliance.Bse"" OR STOCKNAME=""AsianPaint.Bse"""; expected "identifier"; SQL statement:
+delete * from BseStockNames where STOCKNAME = "Reliance.Bse" OR STOCKNAME="AsianPaint.Bse" [42001-224]
+2024-03-31 13:11:08.010000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "Reliance.Bse" not found; SQL statement:
+delete from BseStockNames where STOCKNAME = "Reliance.Bse" OR STOCKNAME="AsianPaint.Bse" [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:148)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:136)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.dml.Delete.doPrepare(Delete.java:112)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-03-31 13:11:25.370000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "Reliance.Bse" not found; SQL statement:
+delete from BseStockNames where STOCKNAME = "Reliance.Bse" OR STOCKNAME="AsianPaint.Bse" [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:148)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:136)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.dml.Delete.doPrepare(Delete.java:112)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-03-31 13:11:54.940000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "Reliance.Bse" not found; SQL statement:
+delete from BseStockNames where STOCKNAME = "Reliance.Bse" [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:148)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.dml.Delete.doPrepare(Delete.java:112)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-03-31 19:37:58.834000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table Student(PRNNO varchar(12),RollNo int,Sname varchar(10),Branch varchar(10),[*]Year year)"; expected "identifier"; SQL statement:
+create table Student(PRNNO varchar(12),RollNo int,Sname varchar(10),Branch varchar(10),Year year) [42001-224]
+2024-03-31 20:30:08.596000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (1, 0345538374, 'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings', 'J.R.R. Tolkien', 4.59, 20)"; expected "identifier"; SQL statement:
+insert into Table Books values (1, 0345538374, 'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings', 'J.R.R. Tolkien', 4.59, 20) [42001-224]
+2024-03-31 20:30:08.597000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (2, 0618260587, 'The Lord of the Rings (The Lord of the Rings #1-3)', 'J.R.R. Tolkien/Alan Lee', 4.50, 30)"; expected "identifier"; SQL statement:
+insert into Table Books values (2, 0618260587, 'The Lord of the Rings (The Lord of the Rings #1-3)', 'J.R.R. Tolkien/Alan Lee', 4.50, 30) [42001-224]
+2024-03-31 20:30:08.598000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (3, 0618346252, 'The Fellowship of the Ring (The Lord of the Rings #1)', 'J.R.R. Tolkien', 4.36, 10)"; expected "identifier"; SQL statement:
+insert into Table Books values (3, 0618346252, 'The Fellowship of the Ring (The Lord of the Rings #1)', 'J.R.R. Tolkien', 4.36, 10) [42001-224]
+2024-03-31 20:30:08.598000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (4, 0743203046, 'Bowling Alone: The Collapse and Revival of American Community', 'Robert D. Putnam', 3.80, 5)"; expected "identifier"; SQL statement:
+insert into Table Books values (4, 0743203046, 'Bowling Alone: The Collapse and Revival of American Community', 'Robert D. Putnam', 3.80, 5) [42001-224]
+2024-03-31 20:30:08.599000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (5, 0192833987, 'War and Peace', 'Leo Tolstoy/Henry Gifford/Aylmer Maude/Louise Maude', 4..11, 25)"; expected "identifier"; SQL statement:
+insert into Table Books values (5, 0192833987, 'War and Peace', 'Leo Tolstoy/Henry Gifford/Aylmer Maude/Louise Maude', 4..11, 25) [42001-224]
+2024-03-31 20:30:08.599000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (6, 0060888695, 'To Kill a Mockingbird', 'Harper Lee/Sissy Spacek', 4..27, 45)"; expected "identifier"; SQL statement:
+insert into Table Books values (6, 0060888695, 'To Kill a Mockingbird', 'Harper Lee/Sissy Spacek', 4..27, 45) [42001-224]
+2024-03-31 20:30:45.938000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (1, 0345538374, 'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings', 'J.R.R. Tolkien', 4.59, 20)"; expected "identifier"; SQL statement:
+insert into Table Books values (1, 0345538374, 'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings', 'J.R.R. Tolkien', 4.59, 20) [42001-224]
+2024-03-31 20:30:45.939000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (2, 0618260587, 'The Lord of the Rings (The Lord of the Rings #1-3)', 'J.R.R. Tolkien/Alan Lee', 4.50, 30)"; expected "identifier"; SQL statement:
+insert into Table Books values (2, 0618260587, 'The Lord of the Rings (The Lord of the Rings #1-3)', 'J.R.R. Tolkien/Alan Lee', 4.50, 30) [42001-224]
+2024-03-31 20:30:45.940000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (3, 0618346252, 'The Fellowship of the Ring (The Lord of the Rings #1)', 'J.R.R. Tolkien', 4.36, 10)"; expected "identifier"; SQL statement:
+insert into Table Books values (3, 0618346252, 'The Fellowship of the Ring (The Lord of the Rings #1)', 'J.R.R. Tolkien', 4.36, 10) [42001-224]
+2024-03-31 20:30:45.940000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (4, 0743203046, 'Bowling Alone: The Collapse and Revival of American Community', 'Robert D. Putnam', 3.80, 5)"; expected "identifier"; SQL statement:
+insert into Table Books values (4, 0743203046, 'Bowling Alone: The Collapse and Revival of American Community', 'Robert D. Putnam', 3.80, 5) [42001-224]
+2024-03-31 20:30:45.941000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (5, 0192833987, 'War and Peace', 'Leo Tolstoy/Henry Gifford/Aylmer Maude/Louise Maude', 4.11, 25)"; expected "identifier"; SQL statement:
+insert into Table Books values (5, 0192833987, 'War and Peace', 'Leo Tolstoy/Henry Gifford/Aylmer Maude/Louise Maude', 4.11, 25) [42001-224]
+2024-03-31 20:30:45.942000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (6, 0060888695, 'To Kill a Mockingbird', 'Harper Lee/Sissy Spacek', 4..27, 45)"; expected "identifier"; SQL statement:
+insert into Table Books values (6, 0060888695, 'To Kill a Mockingbird', 'Harper Lee/Sissy Spacek', 4..27, 45) [42001-224]
+2024-03-31 20:39:10.823000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]Table Books values (1, 0345538374, 'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings', 'J.R.R. Tolkien', 4.59, 20),\000d\000a(2, 0618260587, 'The Lord of the Rings (The Lord of the Rings #1-3)', 'J.R.R. Tolkien/Alan Lee', 4.50, 30),\000d\000a(3, 0618346252, 'The Fellowship of the Ring (The Lord of the Rings #1)', 'J.R.R. Tolkien', 4.36, 10),\000d\000a(4, 0743203046, 'Bowling Alone: The Collapse and Revival of American Community', 'Robert D. Putnam', 3.80, 5),\000d\000a(5, 0192833987, 'War and Peace', 'Leo Tolstoy/Henry Gifford/Aylmer Maude/Louise Maude', 4.11, 25),\000d\000a(6, 0060888695, 'To Kill a Mockingbird', 'Harper Lee/Sissy Spacek', 4..27, 45)"; expected "identifier"; SQL statement:
+insert into Table Books values (1, 0345538374, 'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings', 'J.R.R. Tolkien', 4.59, 20),
+(2, 0618260587, 'The Lord of the Rings (The Lord of the Rings #1-3)', 'J.R.R. Tolkien/Alan Lee', 4.50, 30),
+(3, 0618346252, 'The Fellowship of the Ring (The Lord of the Rings #1)', 'J.R.R. Tolkien', 4.36, 10),
+(4, 0743203046, 'Bowling Alone: The Collapse and Revival of American Community', 'Robert D. Putnam', 3.80, 5),
+(5, 0192833987, 'War and Peace', 'Leo Tolstoy/Henry Gifford/Aylmer Maude/Louise Maude', 4.11, 25),
+(6, 0060888695, 'To Kill a Mockingbird', 'Harper Lee/Sissy Spacek', 4..27, 45) [42001-224]
+2024-03-31 20:41:51.342000+01:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "TITLE CHARACTER VARYING(32)": "'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings' (69)"; SQL statement:
+insert into Books values (1, 0345538374, 'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings', 'J.R.R. Tolkien', 4.59, 20) [22001-224]
+2024-03-31 21:47:42.623000+01:00 jdbc[6]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 13 more
+2024-03-31 21:47:42.651000+01:00 jdbc[6]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 13 more
+2024-03-31 21:47:42.651000+01:00 jdbc[6]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 13 more
+2024-03-31 21:47:47.299000+01:00 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "TITLE CHARACTER VARYING(32)": "'What Do You Care What Other People Think?' (41)"; SQL statement:
+insert into Books values (6	, 0393320928, 'What Do You Care What Other People Think?', 'Richard P. Feynman', 4.27, 38) [22001-224]
+2024-03-31 21:49:35.061000+01:00 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table Books [*]modify Title nvarchar(128) Not Null"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+alter table Books modify Title nvarchar(128) Not Null [42001-224]
+2024-03-31 21:49:45.213000+01:00 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table Books [*]modify Title nvarchar(128) Not Null,"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+alter table Books modify Title nvarchar(128) Not Null, [42001-224]
+2024-03-31 21:50:07.589000+01:00 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table BooksTitle [*]nvarchar(128) Not Null,"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+alter table BooksTitle nvarchar(128) Not Null, [42001-224]
+2024-03-31 23:05:59.654000+01:00 jdbc[7]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 13 more
+2024-03-31 23:38:24.211000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ISSUE" not found; SQL statement:
+insert into Issue values('Transaction1',0618346252,'Bob_1000','2024-01-01','2024-02-02',5.0) [42102-224]
+2024-03-31 23:38:24.212000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ISSUE" not found; SQL statement:
+insert into Issue values('Transaction2',0192833987,'John_1211','2024-11-01','2024-12-02',5.0) [42102-224]
+2024-03-31 23:38:24.212000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ISSUE" not found; SQL statement:
+insert into Issue values('Transaction3',0465067107,'Avery_3231','2024-10-21','2024-11-22',5.0) [42102-224]
+2024-03-31 23:38:24.213000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ISSUE" not found; SQL statement:
+insert into Issue values('Transaction4',0147712556,'Grant_1522','2024-03-05','2024-04-06',5.0) [42102-224]
+2024-03-31 23:38:24.213000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ISSUE" not found; SQL statement:
+insert into Issue values('Transaction5',0393058107,'Bob_1000','2024-07-31','2024-08-31',5.0) [42102-224]
+2024-03-31 23:38:24.214000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ISSUE" not found; SQL statement:
+insert into Issue values('Transaction6',0140449264,'Bob_1000','2024-03-07','2024-04-08',5.0) [42102-224]
+2024-03-31 23:45:21.926000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+alter table IssuedBooks add constraint fkforISBN foreign key(ISBNNO) references Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-03-31 23:50:42.682000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+alter table IssuedBooks add constraint fkforISBN foreign key(ISBNNO) references Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-03-31 23:50:58.902000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+alter table IssuedBooks add constraint fkforISBN foreign key(ISBNNO) references Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-03-31 23:52:08.607000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+alter table IssuedBooks add constraint fkforISBN foreign key (ISBNNO) references Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-03-31 23:54:02.702000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKSISSUED" not found; SQL statement:
+select * from BooksIssued [42102-224]
+2024-03-31 23:59:58.238000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+alter table IssuedBooks add constraint fkforISBN foreign key(ISBNNO) references Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:01:52.316000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+ALTER TABLE IssuedBooks 
+    ADD FOREIGN KEY (ISBNNO) 
+    REFERENCES Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:05:45.429000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE IssuedBooks drop constraint [*]unique"; expected "identifier"; SQL statement:
+ALTER TABLE IssuedBooks drop constraint unique [42001-224]
+2024-04-01 00:07:24.253000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "ISBNNO" not found; SQL statement:
+ALTER TABLE IssuedBooks drop constraint ISBNNO [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableDropConstraint.update(AlterTableDropConstraint.java:51)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:11:33.591000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+alter table IssuedBooks add constraint fkforISBN foreign key(ISBNNO) references Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:12:01.570000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+alter table Books add constraint fkforISBN foreign key(ISBNNO) references IssuedBooks(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:13:04.859000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+ALTER TABLE IssuedBooks ADD CONSTRAINT FK_ISBNNO FOREIGN KEY(ISBNNO) REFERENCES Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:16:13.793000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+ALTER TABLE IssuedBooks ADD CONSTRAINT FK_ISBNNO FOREIGN KEY(ISBNNO) REFERENCES Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:27:47.576000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+ALTER TABLE IssuedBooks ADD CONSTRAINT FK_ISBNNO FOREIGN KEY(ISBNNO) REFERENCES Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:29:37.001000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "BOOKID" not found; SQL statement:
+ALTER TABLE IssuedBooks ADD CONSTRAINT FK_BOOKID FOREIGN KEY(BOOKID) REFERENCES Books(TRANSACTIONID) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:184)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:215)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:32:01.900000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "Transaction1"; SQL statement:
+ALTER TABLE IssuedBooks ADD CONSTRAINT FK_BOOKID FOREIGN KEY(TRANSACTIONID) REFERENCES Books(BOOKID) [22018-224]
+2024-04-01 00:34:39.819000+01:00 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+ALTER TABLE IssuedBooks ADD CONSTRAINT FK_ISBNNO FOREIGN KEY(ISBNNO) REFERENCES Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 00:44:52.195000+01:00 jdbc[8]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:85)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:136)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 13 more
+2024-04-01 00:44:58.545000+01:00 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (ISBNNO)" not found; SQL statement:
+ALTER TABLE IssuedBooks ADD FOREIGN KEY(ISBNNO) REFERENCES Books(ISBNNO) [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:259)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 01:00:20.808000+01:00 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Duplicate column name "ISBNNO"; SQL statement:
+create table IssuedBooks(
+ISBNNO int Not Null,
+TransactionID varchar(32) Not Null,
+ISBNNO int Not Null,
+PersonID varchar(32) Not Null,
+IssueDate date Not Null,
+RetDate date Not Null,
+Fine float Not Null
+) [42121-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.setColumns(Table.java:494)
+	at org.h2.table.TableBase.<init>(TableBase.java:73)
+	at org.h2.mvstore.db.MVTable.<init>(MVTable.java:139)
+	at org.h2.mvstore.db.Store.createTable(Store.java:216)
+	at org.h2.schema.Schema.createTable(Schema.java:797)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:112)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 01:02:30.707000+01:00 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Attempt to define a second primary key; SQL statement:
+alter table Books add constraint pk_ISBNNO primary key (ISBNNO) [90017-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:127)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 01:03:00.426000+01:00 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Attempt to define a second primary key; SQL statement:
+alter table Books add constraint pk_ISBNNO primary key (ISBNNO) [90017-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:127)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 01:05:18.597000+01:00 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE PUBLIC_PARTNER DROP CONSTRAINT [*]UNIQUE"; expected "identifier"; SQL statement:
+ALTER TABLE PUBLIC_PARTNER DROP CONSTRAINT UNIQUE [42001-224]
+2024-04-01 01:05:41.187000+01:00 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PUBLIC_PARTNER" not found; SQL statement:
+ALTER TABLE PUBLIC_PARTNER DROP CONSTRAINT ISBNNO [42102-224]
+2024-04-01 01:12:35.866000+01:00 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table Books drop [*]foreign key FK_ISBNNO"; expected "identifier"; SQL statement:
+alter table Books drop foreign key FK_ISBNNO [42001-224]
+2024-04-01 01:14:12.233000+01:00 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table IssuedBooks drop [*]foreign key FK_ISBNNO"; expected "identifier"; SQL statement:
+alter table IssuedBooks drop foreign key FK_ISBNNO [42001-224]
+2024-04-01 01:15:39.715000+01:00 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "ISSUEDBOOKS" not found; SQL statement:
+ALTER TABLE IssuedBooks DROP CONSTRAINT IssuedBooks [90057-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableDropConstraint.update(AlterTableDropConstraint.java:51)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-01 11:42:29.681000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKNAMES" not found; SQL statement:
+SELECT * FROM BseStockNames [42102-224]
+2024-04-01 11:49:12.109000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKNAMES" not found; SQL statement:
+SELECT * FROM BseStockNames [42102-224]
+2024-04-01 12:03:16.103000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * [*]BseStockNames"; SQL statement:
+select * BseStockNames [42000-224]
+2024-04-01 12:05:33.588000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at H2Test.nativeConnect(H2Test.java:42)
+	at H2Test.main(H2Test.java:100)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 19 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 13 more
+2024-04-02 12:21:52.773000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:53)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 13:22:07.509000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:47)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 13:22:20.193000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:47)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 13:22:39.971000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:47)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 13:24:30.983000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 13:26:05.410000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 13:26:46.049000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -637325307 [42102-224]
+2024-04-03 13:26:48.273000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -2012840643 [42102-224]
+2024-04-03 13:26:49.915000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -1811992229 [42102-224]
+2024-04-03 13:26:50.991000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = 776361237 [42102-224]
+2024-04-03 13:27:23.698000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -637325307 [42102-224]
+2024-04-03 13:27:25.721000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -2012840643 [42102-224]
+2024-04-03 13:27:27.478000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -1811992229 [42102-224]
+2024-04-03 13:27:28.542000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = 776361237 [42102-224]
+2024-04-03 13:30:26.167000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -637325307 [42102-224]
+2024-04-03 13:30:28.168000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -2012840643 [42102-224]
+2024-04-03 13:30:29.774000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -1811992229 [42102-224]
+2024-04-03 13:30:30.755000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = 776361237 [42102-224]
+2024-04-03 13:30:57.357000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -637325307 [42102-224]
+2024-04-03 13:30:59.356000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -2012840643 [42102-224]
+2024-04-03 13:31:00.988000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -1811992229 [42102-224]
+2024-04-03 13:31:02.159000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = 776361237 [42102-224]
+2024-04-03 13:32:01.015000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BSESTOCKHISTORICALVALUESWHERE" not found; SQL statement:
+DELETE FROM BseStockHistoricalValuesWHERE STOCKID = -637325307 [42102-224]
+2024-04-03 15:09:40.442000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "RELIANCE.BSE" not found; SQL statement:
+SELECT COUNT(*) FROM BseStockNames WHERE STOCKNAME = Reliance.Bse [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:148)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1177)
+	at org.h2.command.query.Query.prepare(Query.java:218)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.checkExistenceOfStock(DbUtils.java:68)
+	at DbUtils.insertMultipleCsv(DbUtils.java:114)
+	at H2TestMain.main(H2TestMain.java:54)
+2024-04-03 15:09:42.785000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT COUNT(*) FROM BseStockNames WHERE STOCKNAME = M[*]&Mfin.Bse"; SQL statement:
+SELECT COUNT(*) FROM BseStockNames WHERE STOCKNAME = M&Mfin.Bse [42000-224]
+2024-04-03 15:09:44.447000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "HDFCBANK.BSE" not found; SQL statement:
+SELECT COUNT(*) FROM BseStockNames WHERE STOCKNAME = HdfcBank.Bse [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:148)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1177)
+	at org.h2.command.query.Query.prepare(Query.java:218)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.checkExistenceOfStock(DbUtils.java:68)
+	at DbUtils.insertMultipleCsv(DbUtils.java:114)
+	at H2TestMain.main(H2TestMain.java:54)
+2024-04-03 15:09:45.539000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "BAJFINANCE.BSE" not found; SQL statement:
+SELECT COUNT(*) FROM BseStockNames WHERE STOCKNAME = BajFinance.Bse [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:148)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1177)
+	at org.h2.command.query.Query.prepare(Query.java:218)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.checkExistenceOfStock(DbUtils.java:68)
+	at DbUtils.insertMultipleCsv(DbUtils.java:114)
+	at H2TestMain.main(H2TestMain.java:54)
+2024-04-03 15:12:18.537000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Method is not allowed for a query. Use execute or executeQuery instead of executeUpdate; SQL statement:
+SELECT COUNT(*) FROM BseStockNames WHERE STOCKNAME = 'Reliance.Bse' [90001-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.Prepared.update(Prepared.java:244)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:196)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.checkExistenceOfStock(DbUtils.java:68)
+	at DbUtils.insertMultipleCsv(DbUtils.java:114)
+	at H2TestMain.main(H2TestMain.java:54)
+2024-04-03 15:34:29.680000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-224]
+2024-04-03 15:37:25.305000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STOCKNAMES" not found; SQL statement:
+INSERT INTO BseStockNames(STOCKID, STOCKNAMES) VALUES (-2012840643,'M&Mfin.Bse' ) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:23)
+	at DbUtils.insertMultipleCsv(DbUtils.java:126)
+	at H2TestMain.main(H2TestMain.java:54)
+2024-04-03 15:44:33.169000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STOCKNAMES" not found; SQL statement:
+INSERT INTO BseStockNames(STOCKID, STOCKNAMES) VALUES (-2012840643,'M&Mfin.Bse');
+ [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:23)
+	at DbUtils.insertMultipleCsv(DbUtils.java:126)
+	at H2TestMain.main(H2TestMain.java:54)
+2024-04-03 15:46:09.865000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STOCKNAMES" not found; SQL statement:
+INSERT INTO BseStockNames (STOCKID, STOCKNAMES) VALUES (-2012840643,'M&Mfin.Bse');
+ [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:23)
+	at DbUtils.insertMultipleCsv(DbUtils.java:126)
+	at H2TestMain.main(H2TestMain.java:54)
+2024-04-03 23:05:38.770000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 23:05:51.794000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 23:06:34.521000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3524)
+	at org.h2.jdbc.JdbcResultSet.getDate(JdbcResultSet.java:391)
+	at DbUtils.getMostRecentDateStamp(DbUtils.java:106)
+	at H2TestMain.main(H2TestMain.java:53)
+2024-04-03 23:07:29.700000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3524)
+	at org.h2.jdbc.JdbcResultSet.getDate(JdbcResultSet.java:391)
+	at DbUtils.getMostRecentDateStamp(DbUtils.java:106)
+	at H2TestMain.main(H2TestMain.java:53)
+2024-04-03 23:08:39.361000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3524)
+	at org.h2.jdbc.JdbcResultSet.getDate(JdbcResultSet.java:391)
+	at DbUtils.getMostRecentDateStamp(DbUtils.java:106)
+	at H2TestMain.main(H2TestMain.java:53)
+2024-04-03 23:09:57.382000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 23:10:03.066000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-03 23:10:34.390000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "2" for parameter "columnIndex" [90008-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3524)
+	at org.h2.jdbc.JdbcResultSet.getDate(JdbcResultSet.java:391)
+	at DbUtils.getMostRecentDateStamp(DbUtils.java:106)
+	at H2TestMain.main(H2TestMain.java:53)
+2024-04-04 13:15:53.706000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-04 13:26:25.029000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2024-04-04 13:30:38.840000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Index "PRIMARY_KEY_" not found; SQL statement:
+Merge into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+(776361237, '2024-03-01', 6519.9502, 6607.0, 6503.0, 6571.0, 38718.0), 
+(776361237, '2024-03-04', 6586.3501, 6638.0, 6560.0, 6600.4502, 24162.0), 
+(776361237, '2024-03-05', 6588.25, 6635.0, 6275.0, 6325.25, 73014.0), 
+(776361237, '2024-03-06', 6326.3501, 6347.1499, 6190.0, 6311.25, 138896.0), 
+(776361237, '2024-03-07', 6350.0, 6467.2998, 6330.5498, 6419.2998, 104593.0), 
+(776361237, '2024-03-11', 6555.5, 6555.5, 6406.0, 6456.2002, 30125.0), 
+(776361237, '2024-03-12', 6412.0, 6483.25, 6343.2002, 6434.1001, 44397.0), 
+(776361237, '2024-03-13', 6434.1001, 6515.0, 6390.0498, 6455.25, 22900.0), 
+(776361237, '2024-03-14', 6455.1001, 6470.0, 6300.6499, 6392.1001, 19172.0), 
+(776361237, '2024-03-15', 6386.6001, 6578.7002, 6360.3501, 6513.2002, 51876.0), 
+(776361237, '2024-03-18', 6527.3501, 6557.0498, 6458.0, 6502.6499, 43755.0), 
+(776361237, '2024-03-19', 6510.0, 6665.0, 6505.0498, 6592.25, 20684.0), 
+(776361237, '2024-03-20', 6600.0498, 6729.8999, 6600.0498, 6647.0498, 29864.0), 
+(776361237, '2024-03-21', 6700.6499, 6771.8501, 6660.0, 6715.7002, 26043.0), 
+(776361237, '2024-03-22', 6690.0498, 6800.0, 6690.0498, 6763.1001, 27202.0), 
+(776361237, '2024-03-26', 6710.2998, 6943.0, 6710.2998, 6910.3501, 104295.0), 
+(776361237, '2024-03-27', 6950.0, 7045.0, 6902.3501, 7023.2002, 80002.0), 
+(776361237, '2024-03-28', 7038.0, 7349.6499, 7038.0, 7240.3501, 218738.0), 
+(776361237, '2024-04-01', 7269.25, 7340.0, 7220.4502, 7249.1001, 21651.0), 
+(776361237, '2024-04-02', 7250.0, 7250.0, 7133.8501, 7207.6499, 18081.0);
+ [42112-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getPrimaryKey(Table.java:893)
+	at org.h2.command.dml.Merge.doPrepare(Merge.java:290)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:25)
+	at DbUtils.insertMultipleCsv(DbUtils.java:247)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-04 13:36:27.294000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Index "PRIMARY_KEY_" not found; SQL statement:
+Merge into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+(776361237, '2024-03-01', 6519.9502, 6607.0, 6503.0, 6571.0, 38718.0), 
+(776361237, '2024-03-04', 6586.3501, 6638.0, 6560.0, 6600.4502, 24162.0), 
+(776361237, '2024-03-05', 6588.25, 6635.0, 6275.0, 6325.25, 73014.0), 
+(776361237, '2024-03-06', 6326.3501, 6347.1499, 6190.0, 6311.25, 138896.0), 
+(776361237, '2024-03-07', 6350.0, 6467.2998, 6330.5498, 6419.2998, 104593.0), 
+(776361237, '2024-03-11', 6555.5, 6555.5, 6406.0, 6456.2002, 30125.0), 
+(776361237, '2024-03-12', 6412.0, 6483.25, 6343.2002, 6434.1001, 44397.0), 
+(776361237, '2024-03-13', 6434.1001, 6515.0, 6390.0498, 6455.25, 22900.0), 
+(776361237, '2024-03-14', 6455.1001, 6470.0, 6300.6499, 6392.1001, 19172.0), 
+(776361237, '2024-03-15', 6386.6001, 6578.7002, 6360.3501, 6513.2002, 51876.0), 
+(776361237, '2024-03-18', 6527.3501, 6557.0498, 6458.0, 6502.6499, 43755.0), 
+(776361237, '2024-03-19', 6510.0, 6665.0, 6505.0498, 6592.25, 20684.0), 
+(776361237, '2024-03-20', 6600.0498, 6729.8999, 6600.0498, 6647.0498, 29864.0), 
+(776361237, '2024-03-21', 6700.6499, 6771.8501, 6660.0, 6715.7002, 26043.0), 
+(776361237, '2024-03-22', 6690.0498, 6800.0, 6690.0498, 6763.1001, 27202.0), 
+(776361237, '2024-03-26', 6710.2998, 6943.0, 6710.2998, 6910.3501, 104295.0), 
+(776361237, '2024-03-27', 6950.0, 7045.0, 6902.3501, 7023.2002, 80002.0), 
+(776361237, '2024-03-28', 7038.0, 7349.6499, 7038.0, 7240.3501, 218738.0), 
+(776361237, '2024-04-01', 7269.25, 7340.0, 7220.4502, 7249.1001, 21651.0), 
+(776361237, '2024-04-02', 7250.0, 7250.0, 7133.8501, 7207.6499, 18081.0);
+ [42112-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getPrimaryKey(Table.java:893)
+	at org.h2.command.dml.Merge.doPrepare(Merge.java:290)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:25)
+	at DbUtils.insertMultipleCsv(DbUtils.java:273)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-04 13:39:37.866000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Index "PRIMARY_KEY_" not found; SQL statement:
+Merge into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+(776361237, '2024-03-01', 6519.9502, 6607.0, 6503.0, 6571.0, 38718.0), 
+(776361237, '2024-03-04', 6586.3501, 6638.0, 6560.0, 6600.4502, 24162.0), 
+(776361237, '2024-03-05', 6588.25, 6635.0, 6275.0, 6325.25, 73014.0), 
+(776361237, '2024-03-06', 6326.3501, 6347.1499, 6190.0, 6311.25, 138896.0), 
+(776361237, '2024-03-07', 6350.0, 6467.2998, 6330.5498, 6419.2998, 104593.0), 
+(776361237, '2024-03-11', 6555.5, 6555.5, 6406.0, 6456.2002, 30125.0), 
+(776361237, '2024-03-12', 6412.0, 6483.25, 6343.2002, 6434.1001, 44397.0), 
+(776361237, '2024-03-13', 6434.1001, 6515.0, 6390.0498, 6455.25, 22900.0), 
+(776361237, '2024-03-14', 6455.1001, 6470.0, 6300.6499, 6392.1001, 19172.0), 
+(776361237, '2024-03-15', 6386.6001, 6578.7002, 6360.3501, 6513.2002, 51876.0), 
+(776361237, '2024-03-18', 6527.3501, 6557.0498, 6458.0, 6502.6499, 43755.0), 
+(776361237, '2024-03-19', 6510.0, 6665.0, 6505.0498, 6592.25, 20684.0), 
+(776361237, '2024-03-20', 6600.0498, 6729.8999, 6600.0498, 6647.0498, 29864.0), 
+(776361237, '2024-03-21', 6700.6499, 6771.8501, 6660.0, 6715.7002, 26043.0), 
+(776361237, '2024-03-22', 6690.0498, 6800.0, 6690.0498, 6763.1001, 27202.0), 
+(776361237, '2024-03-26', 6710.2998, 6943.0, 6710.2998, 6910.3501, 104295.0), 
+(776361237, '2024-03-27', 6950.0, 7045.0, 6902.3501, 7023.2002, 80002.0), 
+(776361237, '2024-03-28', 7038.0, 7349.6499, 7038.0, 7240.3501, 218738.0), 
+(776361237, '2024-04-01', 7269.25, 7340.0, 7220.4502, 7249.1001, 21651.0), 
+(776361237, '2024-04-02', 7250.0, 7250.0, 7133.8501, 7207.6499, 18081.0);
+ [42112-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getPrimaryKey(Table.java:893)
+	at org.h2.command.dml.Merge.doPrepare(Merge.java:290)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:25)
+	at DbUtils.insertMultipleCsv(DbUtils.java:273)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-04 13:40:00.144000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Index "PRIMARY_KEY_" not found; SQL statement:
+Merge into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+(776361237, '2024-03-01', 6519.9502, 6607.0, 6503.0, 6571.0, 38718.0), 
+(776361237, '2024-03-04', 6586.3501, 6638.0, 6560.0, 6600.4502, 24162.0), 
+(776361237, '2024-03-05', 6588.25, 6635.0, 6275.0, 6325.25, 73014.0), 
+(776361237, '2024-03-06', 6326.3501, 6347.1499, 6190.0, 6311.25, 138896.0), 
+(776361237, '2024-03-07', 6350.0, 6467.2998, 6330.5498, 6419.2998, 104593.0), 
+(776361237, '2024-03-11', 6555.5, 6555.5, 6406.0, 6456.2002, 30125.0), 
+(776361237, '2024-03-12', 6412.0, 6483.25, 6343.2002, 6434.1001, 44397.0), 
+(776361237, '2024-03-13', 6434.1001, 6515.0, 6390.0498, 6455.25, 22900.0), 
+(776361237, '2024-03-14', 6455.1001, 6470.0, 6300.6499, 6392.1001, 19172.0), 
+(776361237, '2024-03-15', 6386.6001, 6578.7002, 6360.3501, 6513.2002, 51876.0), 
+(776361237, '2024-03-18', 6527.3501, 6557.0498, 6458.0, 6502.6499, 43755.0), 
+(776361237, '2024-03-19', 6510.0, 6665.0, 6505.0498, 6592.25, 20684.0), 
+(776361237, '2024-03-20', 6600.0498, 6729.8999, 6600.0498, 6647.0498, 29864.0), 
+(776361237, '2024-03-21', 6700.6499, 6771.8501, 6660.0, 6715.7002, 26043.0), 
+(776361237, '2024-03-22', 6690.0498, 6800.0, 6690.0498, 6763.1001, 27202.0), 
+(776361237, '2024-03-26', 6710.2998, 6943.0, 6710.2998, 6910.3501, 104295.0), 
+(776361237, '2024-03-27', 6950.0, 7045.0, 6902.3501, 7023.2002, 80002.0), 
+(776361237, '2024-03-28', 7038.0, 7349.6499, 7038.0, 7240.3501, 218738.0), 
+(776361237, '2024-04-01', 7269.25, 7340.0, 7220.4502, 7249.1001, 21651.0), 
+(776361237, '2024-04-02', 7250.0, 7250.0, 7133.8501, 7207.6499, 18081.0);
+ [42112-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getPrimaryKey(Table.java:893)
+	at org.h2.command.dml.Merge.doPrepare(Merge.java:290)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:25)
+	at DbUtils.insertMultipleCsv(DbUtils.java:273)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-04 14:03:18.323000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Index "PRIMARY_KEY_" not found; SQL statement:
+Merge into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+(776361237, '2024-03-01', 6519.9502, 6607.0, 6503.0, 6571.0, 38718.0), 
+(776361237, '2024-03-04', 6586.3501, 6638.0, 6560.0, 6600.4502, 24162.0), 
+(776361237, '2024-03-05', 6588.25, 6635.0, 6275.0, 6325.25, 73014.0), 
+(776361237, '2024-03-06', 6326.3501, 6347.1499, 6190.0, 6311.25, 138896.0), 
+(776361237, '2024-03-07', 6350.0, 6467.2998, 6330.5498, 6419.2998, 104593.0), 
+(776361237, '2024-03-11', 6555.5, 6555.5, 6406.0, 6456.2002, 30125.0), 
+(776361237, '2024-03-12', 6412.0, 6483.25, 6343.2002, 6434.1001, 44397.0), 
+(776361237, '2024-03-13', 6434.1001, 6515.0, 6390.0498, 6455.25, 22900.0), 
+(776361237, '2024-03-14', 6455.1001, 6470.0, 6300.6499, 6392.1001, 19172.0), 
+(776361237, '2024-03-15', 6386.6001, 6578.7002, 6360.3501, 6513.2002, 51876.0), 
+(776361237, '2024-03-18', 6527.3501, 6557.0498, 6458.0, 6502.6499, 43755.0), 
+(776361237, '2024-03-19', 6510.0, 6665.0, 6505.0498, 6592.25, 20684.0), 
+(776361237, '2024-03-20', 6600.0498, 6729.8999, 6600.0498, 6647.0498, 29864.0), 
+(776361237, '2024-03-21', 6700.6499, 6771.8501, 6660.0, 6715.7002, 26043.0), 
+(776361237, '2024-03-22', 6690.0498, 6800.0, 6690.0498, 6763.1001, 27202.0), 
+(776361237, '2024-03-26', 6710.2998, 6943.0, 6710.2998, 6910.3501, 104295.0), 
+(776361237, '2024-03-27', 6950.0, 7045.0, 6902.3501, 7023.2002, 80002.0), 
+(776361237, '2024-03-28', 7038.0, 7349.6499, 7038.0, 7240.3501, 218738.0), 
+(776361237, '2024-04-01', 7269.25, 7340.0, 7220.4502, 7249.1001, 21651.0), 
+(776361237, '2024-04-02', 7250.0, 7250.0, 7133.8501, 7207.6499, 18081.0);
+ [42112-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getPrimaryKey(Table.java:893)
+	at org.h2.command.dml.Merge.doPrepare(Merge.java:290)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:25)
+	at DbUtils.insertMultipleCsv(DbUtils.java:275)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-04 14:04:26.460000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Index "PRIMARY_KEY_" not found; SQL statement:
+Merge into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+(776361237, '2024-03-01', 6519.9502, 6607.0, 6503.0, 6571.0, 38718.0), 
+(776361237, '2024-03-04', 6586.3501, 6638.0, 6560.0, 6600.4502, 24162.0), 
+(776361237, '2024-03-05', 6588.25, 6635.0, 6275.0, 6325.25, 73014.0), 
+(776361237, '2024-03-06', 6326.3501, 6347.1499, 6190.0, 6311.25, 138896.0), 
+(776361237, '2024-03-07', 6350.0, 6467.2998, 6330.5498, 6419.2998, 104593.0), 
+(776361237, '2024-03-11', 6555.5, 6555.5, 6406.0, 6456.2002, 30125.0), 
+(776361237, '2024-03-12', 6412.0, 6483.25, 6343.2002, 6434.1001, 44397.0), 
+(776361237, '2024-03-13', 6434.1001, 6515.0, 6390.0498, 6455.25, 22900.0), 
+(776361237, '2024-03-14', 6455.1001, 6470.0, 6300.6499, 6392.1001, 19172.0), 
+(776361237, '2024-03-15', 6386.6001, 6578.7002, 6360.3501, 6513.2002, 51876.0), 
+(776361237, '2024-03-18', 6527.3501, 6557.0498, 6458.0, 6502.6499, 43755.0), 
+(776361237, '2024-03-19', 6510.0, 6665.0, 6505.0498, 6592.25, 20684.0), 
+(776361237, '2024-03-20', 6600.0498, 6729.8999, 6600.0498, 6647.0498, 29864.0), 
+(776361237, '2024-03-21', 6700.6499, 6771.8501, 6660.0, 6715.7002, 26043.0), 
+(776361237, '2024-03-22', 6690.0498, 6800.0, 6690.0498, 6763.1001, 27202.0), 
+(776361237, '2024-03-26', 6710.2998, 6943.0, 6710.2998, 6910.3501, 104295.0), 
+(776361237, '2024-03-27', 6950.0, 7045.0, 6902.3501, 7023.2002, 80002.0), 
+(776361237, '2024-03-28', 7038.0, 7349.6499, 7038.0, 7240.3501, 218738.0), 
+(776361237, '2024-04-01', 7269.25, 7340.0, 7220.4502, 7249.1001, 21651.0), 
+(776361237, '2024-04-02', 7250.0, 7250.0, 7133.8501, 7207.6499, 18081.0);
+ [42112-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getPrimaryKey(Table.java:893)
+	at org.h2.command.dml.Merge.doPrepare(Merge.java:290)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:25)
+	at DbUtils.insertMultipleCsv(DbUtils.java:275)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-04 14:05:17.059000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Index "PRIMARY_KEY_" not found; SQL statement:
+Merge into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+(776361237, '2024-03-01', 6519.9502, 6607.0, 6503.0, 6571.0, 38718.0), 
+(776361237, '2024-03-04', 6586.3501, 6638.0, 6560.0, 6600.4502, 24162.0), 
+(776361237, '2024-03-05', 6588.25, 6635.0, 6275.0, 6325.25, 73014.0), 
+(776361237, '2024-03-06', 6326.3501, 6347.1499, 6190.0, 6311.25, 138896.0), 
+(776361237, '2024-03-07', 6350.0, 6467.2998, 6330.5498, 6419.2998, 104593.0), 
+(776361237, '2024-03-11', 6555.5, 6555.5, 6406.0, 6456.2002, 30125.0), 
+(776361237, '2024-03-12', 6412.0, 6483.25, 6343.2002, 6434.1001, 44397.0), 
+(776361237, '2024-03-13', 6434.1001, 6515.0, 6390.0498, 6455.25, 22900.0), 
+(776361237, '2024-03-14', 6455.1001, 6470.0, 6300.6499, 6392.1001, 19172.0), 
+(776361237, '2024-03-15', 6386.6001, 6578.7002, 6360.3501, 6513.2002, 51876.0), 
+(776361237, '2024-03-18', 6527.3501, 6557.0498, 6458.0, 6502.6499, 43755.0), 
+(776361237, '2024-03-19', 6510.0, 6665.0, 6505.0498, 6592.25, 20684.0), 
+(776361237, '2024-03-20', 6600.0498, 6729.8999, 6600.0498, 6647.0498, 29864.0), 
+(776361237, '2024-03-21', 6700.6499, 6771.8501, 6660.0, 6715.7002, 26043.0), 
+(776361237, '2024-03-22', 6690.0498, 6800.0, 6690.0498, 6763.1001, 27202.0), 
+(776361237, '2024-03-26', 6710.2998, 6943.0, 6710.2998, 6910.3501, 104295.0), 
+(776361237, '2024-03-27', 6950.0, 7045.0, 6902.3501, 7023.2002, 80002.0), 
+(776361237, '2024-03-28', 7038.0, 7349.6499, 7038.0, 7240.3501, 218738.0), 
+(776361237, '2024-04-01', 7269.25, 7340.0, 7220.4502, 7249.1001, 21651.0), 
+(776361237, '2024-04-02', 7250.0, 7250.0, 7133.8501, 7207.6499, 18081.0);
+ [42112-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getPrimaryKey(Table.java:893)
+	at org.h2.command.dml.Merge.doPrepare(Merge.java:290)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:190)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:25)
+	at DbUtils.insertMultipleCsv(DbUtils.java:275)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-05 21:31:56.299000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values \000a(776361237, '2024-03-04', 6586.3501, 6638.0, 6560.0, 6600.4502, 24162.0), \000a(776361237, '2024-03-05', 6588.25, 6635.0, 6275.0, 6325.25, 73014.0), \000a(776361237, '2024-03-06', 6326.3501, 6347.1499, 6190.0, 6311.25, 138896.0), \000a(776361237, '2024-03-07', 6350.0, 6467.2998, 6330.5498, 6419.2998, 104593.0), \000a(776361237, '2024-03-11', 6555.5, 6555.5, 6406.0, 6456.2002, 30125.0), \000a(776361237, '2024-03-12', 6412.0, 6483.25, 6343.2002, 6434.1001, 44397.0), \000a(776361237, '2024-03-13', 6434.1001, 6515.0, 6390.0498, 6455.25, 22900.0), \000a(776361237, '2024-03-14', 6455.1001, 6470.0, 6300.6499, 6392.1001, 19172.0), \000a(776361237, '2024-03-15', 6386.6001, 6578.7002, 6360.3501, 6513.2002, 51876.0), \000a(776361237, '2024-03-18', 6527.3501, 6557.0498, 6458.0, 6502.6499, 43755.0), \000a(776361237, '2024-03-19', 6510.0, 6665.0, 6505.0498, 6592.25, 20684.0), \000a(776361237, '2024-03-20', 6600.0498, 6729.8999, 6600.0498, 6647.0498, 29864.0), \000a(776361237, '2024-03-21', 6700.6499, 6771.8501, 6660.0, 6715.7002, 26043.0), \000a(776361237, '2024-03-22', 6690.0498, 6800.0, 6690.0498, 6763.1001, 27202.0), \000a(776361237, '2024-03-26', 6710.2998, 6943.0, 6710.2998, 6910.3501, 104295.0), \000a(776361237, '2024-03-27', 6950.0, 7045.0, 6902.3501, 7023.2002, 80002.0), \000a(776361237, '2024-03-28', 7038.0, 7349.6499, 7038.0, 7240.3501, 218738.0), \000a(776361237, '2024-04-01', 7269.25, 7340.0, 7220.4502, 7249.1001, 21651.0), \000a(776361237, '2024-04-02', 7250.0, 7250.0, 7133.8501, 7207.6499, 18081.0) [*]WHERE DateVal > '2024-03-01';\000a"; SQL statement:
+Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+(776361237, '2024-03-04', 6586.3501, 6638.0, 6560.0, 6600.4502, 24162.0), 
+(776361237, '2024-03-05', 6588.25, 6635.0, 6275.0, 6325.25, 73014.0), 
+(776361237, '2024-03-06', 6326.3501, 6347.1499, 6190.0, 6311.25, 138896.0), 
+(776361237, '2024-03-07', 6350.0, 6467.2998, 6330.5498, 6419.2998, 104593.0), 
+(776361237, '2024-03-11', 6555.5, 6555.5, 6406.0, 6456.2002, 30125.0), 
+(776361237, '2024-03-12', 6412.0, 6483.25, 6343.2002, 6434.1001, 44397.0), 
+(776361237, '2024-03-13', 6434.1001, 6515.0, 6390.0498, 6455.25, 22900.0), 
+(776361237, '2024-03-14', 6455.1001, 6470.0, 6300.6499, 6392.1001, 19172.0), 
+(776361237, '2024-03-15', 6386.6001, 6578.7002, 6360.3501, 6513.2002, 51876.0), 
+(776361237, '2024-03-18', 6527.3501, 6557.0498, 6458.0, 6502.6499, 43755.0), 
+(776361237, '2024-03-19', 6510.0, 6665.0, 6505.0498, 6592.25, 20684.0), 
+(776361237, '2024-03-20', 6600.0498, 6729.8999, 6600.0498, 6647.0498, 29864.0), 
+(776361237, '2024-03-21', 6700.6499, 6771.8501, 6660.0, 6715.7002, 26043.0), 
+(776361237, '2024-03-22', 6690.0498, 6800.0, 6690.0498, 6763.1001, 27202.0), 
+(776361237, '2024-03-26', 6710.2998, 6943.0, 6710.2998, 6910.3501, 104295.0), 
+(776361237, '2024-03-27', 6950.0, 7045.0, 6902.3501, 7023.2002, 80002.0), 
+(776361237, '2024-03-28', 7038.0, 7349.6499, 7038.0, 7240.3501, 218738.0), 
+(776361237, '2024-04-01', 7269.25, 7340.0, 7220.4502, 7249.1001, 21651.0), 
+(776361237, '2024-04-02', 7250.0, 7250.0, 7133.8501, 7207.6499, 18081.0) WHERE DateVal > '2024-03-01';
+ [42000-224]
+2024-04-06 02:02:18.470000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-06 02:08:10.239000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "null" for parameter "SQL" [90008-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1257)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:189)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at DbUtils.insertRows(DbUtils.java:25)
+	at DbUtils.insertMultipleCsv(DbUtils.java:247)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-06 02:52:05.603000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-06 11:47:05.545000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values \000a[*]"; expected "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+ [42001-224]
+2024-04-06 12:04:04.220000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values \000a[*]"; expected "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+ [42001-224]
+2024-04-06 12:04:04.226000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values \000a[*]"; expected "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+ [42001-224]
+2024-04-06 12:13:29.501000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values \000a[*]"; expected "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal) Values 
+ [42001-224]
+2024-04-06 12:18:22.959000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STOCKNAME" not found; SQL statement:
+SELECT MAX(DATEVAL) FROM BseStockHistoricalValues WHERE STOCKNAME = BajFinance.Bse; [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1177)
+	at org.h2.command.query.Query.prepare(Query.java:218)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:94)
+	at DbUtils.getMaxDateValFromHistoricalValuesTable(DbUtils.java:135)
+	at DbUtils.getIndexInAvrecordsToWriteFrom(DbUtils.java:190)
+	at DbUtils.insertMultipleCsv(DbUtils.java:270)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-06 12:20:00.553000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STOCKNAME" not found; SQL statement:
+SELECT MAX(DATEVAL) FROM BseStockHistoricalValues WHERE STOCKNAME = 'BajFinance.Bse'; [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1177)
+	at org.h2.command.query.Query.prepare(Query.java:218)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:94)
+	at DbUtils.getMaxDateValFromHistoricalValuesTable(DbUtils.java:135)
+	at DbUtils.getIndexInAvrecordsToWriteFrom(DbUtils.java:190)
+	at DbUtils.insertMultipleCsv(DbUtils.java:270)
+	at H2TestMain.main(H2TestMain.java:55)
+2024-04-06 12:21:27.424000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STOCKNAME" not found; SQL statement:
+SELECT MAX(DATEVAL) FROM BseStockHistoricalValues WHERE STOCKNAME = 'BajFinance.Bse' [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1177)
+	at org.h2.command.query.Query.prepare(Query.java:218)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-06 12:47:29.613000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-04-06 12:56:44.057000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "STOCKID"; SQL statement:
+Select STOCKNAME, StockID, DateVal, OpenVal , HighVal, LowVal, CloseVal, VolumeVal  from BseStockNames, BseStockHistoricalValues where BseStockNames.StockName = 'HdfcBank.Bse' And BseStockNames.StockID = BseStockHistoricalValues.StockID [90059-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:197)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:175)
+	at org.h2.command.query.Select.mapColumns(Select.java:1558)
+	at org.h2.command.query.Select.init(Select.java:1100)
+	at org.h2.command.Parser.parseQuery(Parser.java:2501)
+	at org.h2.command.Parser.parsePrepared(Parser.java:627)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-06 13:10:37.053000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "DATEVAL" must be in the GROUP BY list; SQL statement:
+Select StockName, BseStockNames.StockID, DateVal, OpenVal , HighVal, LowVal, CloseVal, VolumeVal  from BseStockNames, BseStockHistoricalValues where BseStockNames.StockID = BseStockHistoricalValues.StockID group by StockName [90016-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:266)
+	at org.h2.command.query.Select.updateAgg(Select.java:539)
+	at org.h2.command.query.Select.gatherGroup(Select.java:522)
+	at org.h2.command.query.Select.queryGroup(Select.java:488)
+	at org.h2.command.query.Select.queryWithoutCache(Select.java:828)
+	at org.h2.command.query.Query.queryWithoutCacheLazyCheck(Query.java:197)
+	at org.h2.command.query.Query.query(Query.java:520)
+	at org.h2.command.query.Query.query(Query.java:483)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:252)
+	at org.h2.command.Command.executeQuery(Command.java:192)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:257)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-06 13:12:09.101000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "DATEVAL" must be in the GROUP BY list; SQL statement:
+Select StockName, BseStockNames.StockID, DateVal, OpenVal , HighVal, LowVal, CloseVal, VolumeVal  from BseStockNames, BseStockHistoricalValues where BseStockNames.StockID = BseStockHistoricalValues.StockID group by BseStockNames.StockName [90016-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:266)
+	at org.h2.command.query.Select.updateAgg(Select.java:539)
+	at org.h2.command.query.Select.gatherGroup(Select.java:522)
+	at org.h2.command.query.Select.queryGroup(Select.java:488)
+	at org.h2.command.query.Select.queryWithoutCache(Select.java:828)
+	at org.h2.command.query.Query.queryWithoutCacheLazyCheck(Query.java:197)
+	at org.h2.command.query.Query.query(Query.java:520)
+	at org.h2.command.query.Query.query(Query.java:483)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:252)
+	at org.h2.command.Command.executeQuery(Command.java:192)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:257)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-06 13:23:44.509000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STOCKID" must be in the GROUP BY list; SQL statement:
+Select Count(* ), StockID from BseStockHistoricalValues [90016-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:266)
+	at org.h2.command.query.Select.updateAgg(Select.java:539)
+	at org.h2.command.query.Select.gatherGroup(Select.java:522)
+	at org.h2.command.query.Select.queryGroup(Select.java:488)
+	at org.h2.command.query.Select.queryWithoutCache(Select.java:828)
+	at org.h2.command.query.Query.queryWithoutCacheLazyCheck(Query.java:197)
+	at org.h2.command.query.Query.query(Query.java:520)
+	at org.h2.command.query.Query.query(Query.java:483)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:252)
+	at org.h2.command.Command.executeQuery(Command.java:192)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:257)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-06 13:23:51.833000+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STOCKID" must be in the GROUP BY list; SQL statement:
+Select Count(* ), StockID from BseStockHistoricalValues [90016-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:266)
+	at org.h2.command.query.Select.updateAgg(Select.java:539)
+	at org.h2.command.query.Select.gatherGroup(Select.java:522)
+	at org.h2.command.query.Select.queryGroup(Select.java:488)
+	at org.h2.command.query.Select.queryWithoutCache(Select.java:828)
+	at org.h2.command.query.Query.queryWithoutCacheLazyCheck(Query.java:197)
+	at org.h2.command.query.Query.query(Query.java:520)
+	at org.h2.command.query.Query.query(Query.java:483)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:252)
+	at org.h2.command.Command.executeQuery(Command.java:192)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:257)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.lang.Thread.run(Unknown Source)
+2024-04-06 13:39:51.917000+01:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at GetDatabaseConnection.nativeConnect(GetDatabaseConnection.java:37)
+	at GetDatabaseConnection.getDBConnection(GetDatabaseConnection.java:24)
+	at H2TestMain.main(H2TestMain.java:44)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/EclipseNeonEEWs/StockTrading/Database/StocksDB.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
