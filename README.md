@@ -2,20 +2,23 @@
 Sql database manipulation using Java and the h2 database for Indian stocks
 
 # Introduction
-I started with a goal to create a database for stock trading and analysis. A stock API (Alpha Vantage API) is available for free with certain limitations (calls per minute etc.). I chose to download CSV files for stock scrips, so these files will remain on my local machine.
 
-I wanted to use a new lightweight database that supports the the standatds (ACID, Referential Integrity, and small footprint). As I searched on the Web I found light and embeddable databases like H2, HSQLDB, SQLite. I chose to use H2 database
+I began with the purpose of developing a database for stock trading and analysis. I opted to use the Api provided by Alpha Vantage which is free but has some constraints (calls per minute, etc.). I decided to download CSV files for stock scrips, so they will remain on my local system. <br>
 
-- Full ACID compliant transactions
+I intended to use a new, lightweight database that met the criteria (ACID, Referential Integrity, and Small Footprint). H2, HSQLDB, and SQLite were among the light and embeddable databases. I elected to use the H2 database. <br>
+It enables this project to have: 
+- Full ACID-compliant transactions
 - Referential Integrity
+<br>
+The CSV files retrieved via the Alpha Vantage API are sorted in descending order by date.  I used the Eclipse IDE and the Apache commons-CSV jars to programmatically extract a list of CsvRecords.<br>
+To insert the CSV Records, I used H2's JDBC driver to connect to the database and perform SQL queries.
 
-The CSV files downloaded with Alpha Vantage API are arranged in descending order by date. I use Eclipse IDE, and I used Apache commons-CSV jars to programmatically get a list of CsvRecords, to insert the Csv Records, I used H2's JDBC driver to connect to the database, and execute SQL queries
+I started with the DDL scripts and made two tables for this. One for stock names and one for a daily history of stock prices. The history table contains an ID column with foreign keys to the master table containing stock names.
 
-I started with the DDL scripts, and created 2 tables for this. One for stock names and one for per day history for daily stock values. The history table has a ID column having foreign key into the master table of stock names.
-
-Note: All the SQL queries used are listed below.
-After that, for inserting the daily data, for each stock, the latest date for that stock was taken and records in the CSV files after that date were inserted in the history for each stock were written this way
-
+> Note:
+>  All the SQL queries used are listed [add this link].
+> After that, for inserting the daily data, for each stock, the latest date for that stock was taken
+> And records in the CSV files after that date were inserted in the history for each stock and were written this way
 ## Manual DML and DDL examples:
 
 ------------------------------------------------------------
@@ -145,3 +148,8 @@ Select StockName, BseStockNames.StockID, DateVal, OpenVal , HighVal, LowVal, Clo
 // Group by , if table multiple rows for the given column group by those.
 
 Select Count(* ), StockID from BseStockHistoricalValues group by StockID;
+
+## Table Diagram
+
+![image](https://github.com/DoesDevStuff/StocksDatabase-Sql-h2/assets/74312830/0c4f1537-51b1-4518-ba4a-0c55d067cf55)
+
