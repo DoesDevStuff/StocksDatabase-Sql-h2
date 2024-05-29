@@ -14,11 +14,12 @@ The CSV files retrieved via the Alpha Vantage API are sorted in descending order
 To insert the CSV Records, I used H2's JDBC driver to connect to the database and perform SQL queries.
 
 I started with the DDL scripts and made two tables for this. One for stock names and one for a daily history of stock prices. The history table contains an ID column with foreign keys to the master table containing stock names.
-
+<br>
 > Note:
 >  All the SQL queries used are listed [add this link].
 > After that, for inserting the daily data, for each stock, the latest date for that stock was taken
-> And records in the CSV files after that date were inserted in the history for each stock and were written this way
+> and records in the CSV files after that date were inserted in the history for each stock and were written this way
+
 ## Manual DML and DDL examples:
 
 ------------------------------------------------------------
