@@ -1,0 +1,70 @@
+
+- unzip in directory that does not have spaces e.g. d:\
+- the zip already has h2 as the root, so unzip will be in d:\h2
+- The default user/pass is sa/<no password>
+
+-----------------------------------------------------------------------------------------------
+- open D:\H2\bin\h2w.bat
+- if you have old installation of DB and get an error about invalid database or password
+  delete these 3 files from C:\Users\<your name>
+  .h2.server.properties, test.mv.db, test.trace.db they will get receated on login
+-----------------------------------------------------------------------------------------------
+
+- open D:\H2\bin\h2w.bat
+- a popup will be opened in browser, and a tray icon will also get created
+  See/Keep the default settings as:
+  Saved Settings: Generic H2 (Embedded)
+  Setting Name:   Generic H2 (Embedded)
+  Driver Class:	  org.h2.Driver
+  JDBC URL:       jdbc:h2:~/test     <--- we will be changing this
+  User Name:	  sa
+  Password:       <blank>
+
+This will connect to the default dabase "test"
+
+The JDBC URL above refers to a database "test" in user's home directory (~) jdbc:h2:~/test
+In Windows, a user's home directory is C:\Users\<your name>.
+You will see the following files in this directory test.mv.db and test.trace.db (created later)
+
+For our database we would like to create a different database other than the default and also
+"embed" the database in our project.
+Example: StocksDB.mv.db in D:\EclipseJee2021-09Ws\StockTrading\Database
+
+For this, change the JDBC URL to
+jdbc:h2:D:\EclipseJee2021-09Ws\StockTrading\Database\StocksDB
+
+if a database "StocksDB" does not exist in this location, it will be created
+and the console will show the UI for this database
+
+
+-------------------------------------------------------
+Other info:
+- A collection of tables can be put under a "schema" for logical separation
+- The default schema for new connections in H2 is "PUBLIC"
+- if you want to use a specific schama as a default, when connecting, you can use this syntax in JDBC URL
+  jdbc:h2:test;SCHEMA=ABC (you can use this syntax when connecting to console to use a default schema
+
+-------------------------------------------------------
+//H2 using tcp
+java -jar h2-2.2.224.jar -webAllowOthers -tcpAllowOthers
+
+
+https://www.mastertheboss.com/jbossas/jboss-datasource/h2-database-tutorial/
+
+import org.h2.tools.Server;
+...
+// start the H2 DB TCP Server
+Server server = Server.createTcpServer("-tcpPort", "9092", "-tcpAllowOthers").start();
+...
+// stop the H2 DB TCP Server
+server.stop();
+
+
+https://stackoverflow.com/questions/36310443/h2-database-auto-server-mode-accessing-through-web-console-remotely
+jdbc:h2:tcp://<host>:<port>/~/datafactory;MODE=MSSQLServer;AUTO_SERVER=TRUE;
+
+
+
+-------------------------------------------------------
+
+
