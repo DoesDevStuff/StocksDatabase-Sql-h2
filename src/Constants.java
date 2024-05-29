@@ -11,5 +11,6 @@ public class Constants {
 	public static final String DATE_FORMAT				= "yyyy-MM-dd";
 	public static final String UNIVERSAL_DATE_FORMAT	= "yyyy-MM-dd";
 
+	public static final String BSE_STOCK_NAMES_TABLE = "BseStockNames";
 	public static final String HISTORICAL_VALUE_TABLE = "BseStockHistoricalValues";
 }

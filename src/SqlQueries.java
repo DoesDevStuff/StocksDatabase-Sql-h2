@@ -17,7 +17,13 @@ public class SqlQueries {
 		"Insert into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal)" +
 		" Values " +
 		"";
+	
+	public static String MERGE_HISTORIAL_VALUES_SQL =
+			"Merge into BseStockHistoricalValues (StockID, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal)" +
+			" Values " +
+			"";
 
+	
 	public static String GET_HISTORIAL_VALUES_FROM_DATE_SQL =
 		"Select BseStockHistoricalValues.StockID, StockName, DateVal, OpenVal, HighVal, LowVal, CloseVal, VolumeVal" +
 		" from BseStockHistoricalValues, BseStockNames" +
@@ -52,5 +58,12 @@ public class SqlQueries {
 		" ORDER BY DateVal ASC" +
 		"";
 
+	public static String INSERT_INTO_BSESTOCKNAMES_TABLE = "INSERT INTO " + Constants.BSE_STOCK_NAMES_TABLE + " (STOCKID, STOCKNAME) VALUES ";
+	
 	public static String DELETE_FROM_HISTORICAL_TABLE = "DELETE FROM " + Constants.HISTORICAL_VALUE_TABLE;
+	public static String DELETE_FROM_HISTORICAL_TABLE_WHERE = "DELETE FROM " + Constants.HISTORICAL_VALUE_TABLE + " WHERE STOCKID = ";
+	
+	public static String SELECT_COUNT_FROM_BSESTOCKNAMES_TABLE_WHERE = "SELECT COUNT(*) FROM " + Constants.BSE_STOCK_NAMES_TABLE + " WHERE STOCKNAME = ";
+	public static String SELECT_COUNT_FROM_HISTORICAL_VALUES_TABLE = "SELECT COUNT(*) FROM " + Constants.HISTORICAL_VALUE_TABLE + ";";
+	public static String SELECT_MAX_DATE_FROM_HISTORICAL_VALUES_TABLE = "SELECT MAX(DATEVAL) FROM " + Constants.HISTORICAL_VALUE_TABLE + " WHERE STOCKID = ";
 }

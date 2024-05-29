@@ -6,7 +6,7 @@ public class DbStockRecord {
 	public int stockID = -1;
 	public String stockName = null;
 	public String dateString = null;
-	//public java.sql.Date sqlDate = null;
+	public java.sql.Date sqlDate = null;
 	public double open = -1;
 	public double high = -1;
 	public double low = -1;
@@ -31,12 +31,12 @@ public class DbStockRecord {
 			this.stockID = stockName.hashCode(); //stockID is hashcode of the stock name
 			dateString = csvRecord.get(Constants.TIMESTAMP); //get date as a string from CSVRecord 
 
-			/* not required for now
+			
 			//convert date string from CSVRecord to java.sql.Date format
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(Constants.DATE_FORMAT);
 			java.util.Date javaUtilDate = simpleDateFormat.parse(dateString);
 			this.sqlDate = new java.sql.Date(javaUtilDate.getTime());
-			*/
+			
 
 			//convert OHLCV strings from CSVRecord to number 
 			this.open = Double.parseDouble(csvRecord.get(Constants.OPEN));
