@@ -17,7 +17,7 @@ I started with the DDL scripts and made two tables for this. One for stock names
 <br>
 
 > Note:
->  All the SQL queries used are listed [add this link].
+>  All the SQL queries used are listed here [SQL-Queries.java](https://github.com/DoesDevStuff/StocksDatabase-Sql-h2/blob/1058c2aaeaf45db82f671faab59f6b930fcbe3c0/src/SqlQueries.java).
 > After that, for inserting the daily data, for each stock, the latest date for that stock was taken
 > and records in the CSV files after that date were inserted in the history for each stock and were written this way
 
